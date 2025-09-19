@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Estructura-de-datos-4F.iml" filepath="$PROJECT_DIR$/.idea/Estructura-de-datos-4F.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U1_Ti_03_SerieFib/U1_Ti_03_SerieFib.iml" filepath="$PROJECT_DIR$/U1_Ti_03_SerieFib/U1_Ti_03_SerieFib.iml" />
+    </modules>
+  </component>
+</project>
