@@ -16,22 +16,6 @@ public class Main {
         System.out.println(a + " elevado a " + b + " es " + resultado);
 
 
-        Queue<Cliente> queue = new ArrayDeque<>();
-
-        Cliente c1=new Cliente(1, "Juanito");
-        c1.agregarDoc("Documento1");
-        c1.agregarDoc("Documento2");
-
-        Cliente c2=new Cliente(2, "Alfonso");
-        c2.agregarDoc("Documento3");
-        c2.agregarDoc("Documento4");
-
-        Cliente c3=new Cliente(3, "Alfredo");
-        c3.agregarDoc("Documento5");
-        c3.agregarDoc("Documento6");
-
-        queue.offer(c1);
-        queue.offer(c2);
 
 
    }

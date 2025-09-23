@@ -1,48 +1,58 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.LinkedList;
+import java.util.Queue;
 
 public class Cliente {
-    /*Instrucciones:
-Un banco atiende clientes en una cola.
-Cada cliente lleva una pila de documentos.
-Encola a 3 clientes con su nombre.
-A cada cliente apila 2 documentos.
-Atiende al primer cliente, mostrando su nombre y retirando sus documentos uno a uno.
-Pasa al siguiente cliente.
-Ejemplo de salida:
-Cliente en atención: Carlos
-Documentos retirados: Doc1, Doc2
-Cola restante: [María, José]
-Notas:
-Crea una clase llamada cliente: id,nombre, documentos (debe de ser un stack)
-Métodos:
--agregarDocumento(String doc)
--atender()
-   debe de vaciar la pila de docs
-   Algo como:
-   while(!docs.isEmpty()){
-         sout("retirando doc: "+docs.pop())
-      }
-En main:
-Crea la Queue de clientes y haz el proceso de antencion*/
-    int id  = 0;
-    String name ;
+    int id;
+    String name;
     Deque<String> docs;
 
-    Cliente(int id,String name){
+    Cliente(int id, String name) {
         this.id = id;
         this.name = name;
         docs = new ArrayDeque<>();
     }
-    public void agregarDoc(String doc){
-        docs.push(doc);
-        while(!docs.isEmpty()){
-            System.out.println("documento retirado "  + docs.pop());
+
+    public void agregarDoc(String doc) {
+        docs.push(doc);  // solo agregar el documento, no quitar
+    }
+
+    public void atender() {
+        System.out.println("Cliente en atención: " + name);
+        System.out.print("Documentos retirados: ");
+        while (!docs.isEmpty()) {
+            System.out.print(docs.pop());
+            if (!docs.isEmpty()) {
+                System.out.print(", ");
+            }
         }
-
-    }
-    public void atenderDoc(String doc){
+        System.out.println();
     }
 
+    public static void main(String[] args) {
+        Queue<Cliente> queue = new ArrayDeque<>();
+
+        Cliente c1 = new Cliente(1, "Juanito");
+        c1.agregarDoc("Documento1");
+        c1.agregarDoc("Documento2");
+
+        Cliente c2 = new Cliente(2, "Alfonso");
+        c2.agregarDoc("Documento3");
+        c2.agregarDoc("Documento4");
+
+        Cliente c3 = new Cliente(3, "Alfredo");
+        c3.agregarDoc("Documento5");
+        c3.agregarDoc("Documento6");
+
+        queue.offer(c1);
+        queue.offer(c2);
+        queue.offer(c3);
+
+        while (!queue.isEmpty()) {
+            Cliente clienteActual = queue.poll();
+            clienteActual.atender();
+            System.out.println("Cola restante: " + queue.stream().map(c -> c.name).toList());
+            System.out.println();
+        }
+    }
 }
