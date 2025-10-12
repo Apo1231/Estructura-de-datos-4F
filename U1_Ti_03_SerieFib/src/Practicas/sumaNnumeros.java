@@ -1,3 +1,5 @@
+package Practicas;
+
 public class sumaNnumeros {
     /*Instrucciones:
     Calcula de forma recursiva la suma de los primeros n números naturales.

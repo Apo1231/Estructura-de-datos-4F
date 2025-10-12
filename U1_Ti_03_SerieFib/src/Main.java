@@ -1,6 +1,6 @@
-import java.util.ArrayDeque;
-import java.util.LinkedList;
-import java.util.Queue;
+import Practicas.InvertirCadena;
+import Practicas.PotenciaRecursiva;
+import Practicas.sumaNnumeros;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package Practicas;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Queue;
@@ -18,7 +20,7 @@ public class Cliente {
     }
 
     public void atender() {
-        System.out.println("Cliente en atención: " + name);
+        System.out.println("Practicas.Cliente en atención: " + name);
         System.out.print("Documentos retirados: ");
         while (!docs.isEmpty()) {
             System.out.print(docs.pop());

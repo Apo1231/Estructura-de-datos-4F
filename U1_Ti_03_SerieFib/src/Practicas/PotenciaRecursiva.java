@@ -1,3 +1,5 @@
+package Practicas;
+
 public class PotenciaRecursiva {
 
     public static int potencia(int a, int b) {

@@ -1,3 +1,5 @@
+package Practicas;
+
 public class FibonacciRecursivo {
 
     public static void fibonacci(int n, int a, int b) {

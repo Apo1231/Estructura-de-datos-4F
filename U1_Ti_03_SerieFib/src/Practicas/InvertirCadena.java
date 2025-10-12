@@ -1,3 +1,5 @@
+package Practicas;
+
 public class InvertirCadena {
     static String resultado = "";
 

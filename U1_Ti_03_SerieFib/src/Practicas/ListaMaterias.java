@@ -1,3 +1,5 @@
+package Practicas;
+
 import java.util.ArrayList;
 
 public class ListaMaterias {
@@ -22,7 +24,7 @@ public class ListaMaterias {
     public void imprimir() {
         System.out.println("Materias: " + materias);
     }
-
+//U1_Ti_02_PromedioDeSueldos
     public static void main(String[] args) {
         ListaMaterias lista = new ListaMaterias();
 
